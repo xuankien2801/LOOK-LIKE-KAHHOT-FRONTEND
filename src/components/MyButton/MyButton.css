@@ -1,0 +1,70 @@
+.MyButton:hover {
+    border: none;
+    cursor: pointer;
+}
+.MyButton p {
+    color: #fff;
+}
+.small {
+    min-width: 64px;
+    height: 36px;
+    padding: 8px 16px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 3px solid #000;
+}
+.small:hover {
+    height: 33px;
+    margin-top: 3px;
+}
+.medium {
+    min-width: 96px;
+    height: 48px;
+    padding: 0px 16px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 4px solid #000;
+}
+.medium:hover {
+    height: 44px;
+    margin-top: 4px;
+}
+.black {
+    background-color: #2f2f2f;
+    border-bottom: 4px solid #000;
+}
+.black:hover {
+    background-color: #000;
+}
+.green {
+    background-color: #008000;
+    border-color: #006400;
+}
+.green:hover {
+    background-color: #006400;
+}
+.blue {
+    background-color: #1368CE;
+    border-color: #00008B;
+}
+.blue:hover {
+    background-color: #00008B;
+}
+.red {
+    background-color: #ce1313;
+    border-color: #8b0000;
+}
+.red:hover {
+    background-color: #8b0000;
+}
+.yellow {
+    background-color: #FFCC00;
+    border-color: #F7BD01;
+}
+.yellow:hover {
+    background-color: #F7BD01;
+}
