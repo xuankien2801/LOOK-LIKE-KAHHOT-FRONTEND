@@ -1,0 +1,99 @@
+
+/* Open Card Teacher*/
+.card_teacher{
+    text-decoration:none;
+  }
+  .teacher_container{
+     width: 200px;
+    height: 193px;
+    flex-grow: 0;
+    padding: 49px 52px 48px;
+    background-color: #d13643;
+    margin: 0 60%;
+  }
+  .icon_teaceher{
+    width: 96px;
+    height: 96px;
+    flex-grow: 0;
+    padding: 28px 27.3px 26.3px 27px;
+    background-color: #9D2022;
+    border-radius: 50%;
+    margin: 25px 0 0 13%;
+  }
+  .icon_teaceher img{
+    width: 100%;
+  }
+   .title_teacher{
+    width: 200px;
+    height: 76px;
+    flex-grow: 0;
+    padding: 25px 62px 29px 63px;
+    background-color: #fff;
+    margin: 66px 0;
+  }
+  .title_teacher h1 {
+    width: 75px;
+    height: 22px;
+    flex-grow: 0;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #343435;
+    text-align: center;
+  } 
+  /*End Card Teacher*/
+  
+  /* Open Card Student*/
+  .card_student{
+    text-decoration:none;
+  }
+  .student_container{
+     width: 200px;
+    height: 193px;
+    flex-grow: 0;
+    padding: 49px 52px 48px;
+    background-color: #3167c7;
+  
+  }
+  .icon_student{
+    width: 96px;
+    height: 96px;
+    flex-grow: 0;
+    padding: 28px 27.3px 26.3px 27px;
+    background-color: #1A4199;
+    border-radius: 50%;
+    margin: 25px 0 0 13%;
+  }
+  .icon_student img{
+    width: 100%;
+  }
+   .title_student{
+    width: 200px;
+    height: 76px;
+    flex-grow: 0;
+    padding: 25px 62px 29px 63px;
+    background-color: #fff;
+    margin: 66px 0;
+  }
+  .title_student h1 {
+    width: 75px;
+    height: 22px;
+    flex-grow: 0;
+    font-family: Montserrat;
+    font-size: 18px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: left;
+    color: #343435;
+    text-align: center;
+  } 
+    
+  /* End Card Student*/
