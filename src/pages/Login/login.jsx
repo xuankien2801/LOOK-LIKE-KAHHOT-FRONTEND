@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 import React, { useState } from 'react';
 // import './test.css';
 import Grid from '@mui/material/Grid';
@@ -62,7 +63,7 @@ const Login = () => {
                                         <button className={'Rectangle-6'} type="submit">Login</button>
                                     </Grid>
                                     <Grid item xs={12}>
-                                        <span className={'Dont-have-an-account'}>Don't have an account?</span>
+                                        <span className={'Dont-have-an-account'}>Do not have an account?</span>
                                         <Link to="/sign-up">
                                             <span className={'Sign_up'}> Sign up!</span>
                                         </Link>

@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-unused-vars */
 import React from "react";
 import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
@@ -47,7 +49,7 @@ const Register = () => {
     return (
         <>
             <div>
-                <div className={'Mn_hnh_ng_nhp'}>
+                <div className={'MH_DangNhap'}>
                     <div className={'image-4'}>
                         <img src={require('../../images/kahoot.png')} />
                     </div>

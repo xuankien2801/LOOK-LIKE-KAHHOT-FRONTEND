@@ -1,7 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import DefaultLayout from '../src/layouts/index';
 import { publicRoutes } from '../src/routes/index';
-import InGame from './pages/InGame/InGame';
+import InGame from '../src/pages/InGame/InGame';
 import React from "react";
 
 import './App.css';
