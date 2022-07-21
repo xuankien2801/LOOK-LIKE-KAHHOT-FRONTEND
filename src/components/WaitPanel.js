@@ -1,6 +1,6 @@
 import React from 'react';
-import { GroupDiv } from '../pages/dashboard';
-import Title from './Title';
+import { GroupDiv } from '../pages/Home/Home';
+import Title from './Titles/Title';
 
 // This component is used by the playGame page
 // while the player waits for the admin to start

@@ -1,10 +1,10 @@
 import React from 'react';
-import { GroupDiv } from '../pages/dashboard';
-import { getQuestion } from './QuestionPanel';
+import { GroupDiv } from '../../pages/Home/Home';
+import { getQuestion } from '../Question/QuestionPanel';
 import PropTypes from 'prop-types';
-import QuestionContainer from './QuestionContainer';
-import AnswerOptions from './AnswerOptions';
-import CenteredTitle from './CenteredTitle';
+import QuestionContainer from '../Question/QuestionContainer';
+import AnswerOption from './AnswerOption';
+import CenteredTitle from '../Titles/CenteredTitle';
 
 export const answerStyle = {
   marginTop: '15px',
@@ -46,7 +46,7 @@ const AnswerPanel = ({ playerId, counter }) => {
   // This function fetches the answers and passes it to
   // answerIds
   const getAnswer = async () => {
-    const req = await fetch(`http://localhost:5005/play/${playerId}/answer`, {
+    const req = await fetch(`http://localhost:4000/play/${playerId}/answer`, {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -62,7 +62,7 @@ const AnswerPanel = ({ playerId, counter }) => {
         <QuestionContainer desc={question} counter={counter}></QuestionContainer>
         <CenteredTitle name="Times Up!"></CenteredTitle>
         <p style={answerStyle}>Correct Answers:</p>
-        <AnswerOptions key={answerIds} options={options} answerIds={answerIds}></AnswerOptions>
+        <AnswerOption key={answerIds} options={options} answerIds={answerIds}></AnswerOption>
         <p style={waitStyle}>Waiting for the next question...</p>
       </GroupDiv>
     </>

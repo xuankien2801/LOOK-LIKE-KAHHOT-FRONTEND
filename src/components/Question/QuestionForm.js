@@ -1,12 +1,12 @@
 import React from 'react';
 import { TextField, FormGroup, FormControlLabel, Checkbox, Button } from '@mui/material';
-import { FormDiv } from '../pages/dashboard';
-import { fetchGameInfo } from './GameFeed';
-import FullButton from './FullButton';
+import { FormDiv } from '../../pages/Home/Home';
+import { fetchGameInfo } from '../GamePlay/GameFeed';
+import FullButton from '../Button/FullButton';
 import RemoveCircleOutlineIcon from '@mui/icons-material/RemoveCircleOutline';
 import AddCircleOutlineIcon from '@mui/icons-material/AddCircleOutline';
-import { fileToDataUrl } from './ImageConverter';
-import ErrorPopup from './ErrorPopup';
+import { fileToDataUrl } from '../ImageConverter';
+import ErrorList from '../ErrorList';
 import PropTypes from 'prop-types';
 
 export const questionStyle = {
@@ -245,7 +245,7 @@ const QuestionForm = ({ token, quizId, questionId }) => {
   // This function updates all of the modified data for
   // the question to the backend
   const updateData = async () => {
-    const req = await fetch(`http://localhost:5005/admin/quiz/${quizId}`, {
+    const req = await fetch(`http://localhost:4000/admin/quiz/${quizId}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
@@ -266,7 +266,7 @@ const QuestionForm = ({ token, quizId, questionId }) => {
 
   return (
     <>
-      { popup && <ErrorPopup desc={desc} title={descTitle} toggle={() => activatePopup()}></ErrorPopup>}
+      { popup && <ErrorList desc={desc} title={descTitle} toggle={() => activatePopup()}></ErrorList>}
       <form aria-label='Edit question form'>
         <FormDiv>
           <h2 style={TitleStyle}>Edit Question Details</h2>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import JoinBar from '../../components/JoinBar';
+import JoinBar from '../../components/Bars/JoinBar';
 import Helmet from 'react-helmet';
 
 // This page allows the player to sign into a game as required by 2.4.1

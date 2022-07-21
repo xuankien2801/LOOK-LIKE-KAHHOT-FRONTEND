@@ -1,12 +1,12 @@
 import React from 'react';
-import { GroupDiv } from '../pages/dashboard';
+import { GroupDiv } from '../../pages/Home/Home';
 import { fetchGameInfo } from './GameFeed';
 import PropTypes from 'prop-types';
 import { TextField } from '@mui/material';
-import FullButton from './FullButton';
-import Title from './Title';
-import { fileToDataUrl } from './ImageConverter';
-import ErrorPopup from './ErrorPopup';
+import FullButton from '../Button/FullButton';
+import Title from '../Titles/Title';
+import { fileToDataUrl } from '../ImageConverter';
+import ErrorList from '../ErrorList';
 
 const ThumbnailStyle = {
   marginTop: '12px',
@@ -63,7 +63,7 @@ const EditGame = ({ quizId, token }) => {
     if (image !== null) {
       imageProcessed = await fileToDataUrl(image);
     }
-    const req = await fetch(`http://localhost:5005/admin/quiz/${quizId}`, {
+    const req = await fetch(`http://localhost:4000/admin/quiz/${quizId}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',
@@ -84,7 +84,7 @@ const EditGame = ({ quizId, token }) => {
 
   return (
     <GroupDiv>
-      {popup && <ErrorPopup title={descTitle} desc={desc} toggle={activatePopup} />}
+      {popup && <ErrorList title={descTitle} desc={desc} toggle={activatePopup} />}
       <form aria-label='Edit game details'>
         <Title name="Edit game details"></Title>
         <TextField

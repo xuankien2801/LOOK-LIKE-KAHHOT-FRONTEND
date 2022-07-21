@@ -1,10 +1,10 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { fetchGameInfo } from './GameFeed';
-import { GroupDiv } from '../pages/dashboard';
+import { fetchGameInfo } from '../GamePlay/GameFeed';
+import { GroupDiv } from '../../pages/Home/Home';
 import Button from '@mui/material/Button';
-import FullButton from './FullButton';
-import Title from './Title';
+import FullButton from '../Button/FullButton';
+import Title from '../Titles/Title';
 import EditIcon from '@mui/icons-material/Edit';
 import { IconButton } from '@mui/material';
 import PropTypes from 'prop-types';
@@ -83,7 +83,7 @@ const QuestionFeed = ({ quizId, token }) => {
 
   // This function updates the question changes to the backend
   const updateData = async () => {
-    await fetch(`http://localhost:5005/admin/quiz/${quizId}`, {
+    await fetch(`http://localhost:4000/admin/quiz/${quizId}`, {
       method: 'PUT',
       headers: {
         'Content-type': 'application/json',

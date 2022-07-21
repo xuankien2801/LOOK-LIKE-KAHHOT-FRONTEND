@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GroupDiv } from '../pages/dashboard';
+import { GroupDiv } from '../../pages/Home/Home';
 import { TextField } from '@mui/material';
-import FullButton from './FullButton';
+import FullButton from '../Button/FullButton';
 import { useNavigate } from 'react-router-dom';
-import ErrorPopup from './ErrorPopup';
-import Title from './Title';
+import ErrorList from '../ErrorList';
+import Title from '../Titles/Title';
 
 const FieldStyle = {
   width: '100%',
@@ -42,7 +42,7 @@ const JoinBar = ({ sessionId }) => {
       return;
     }
 
-    const req = await fetch(`http://localhost:5005/play/join/${seshId}`, {
+    const req = await fetch(`http://localhost:4000/play/join/${seshId}`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -62,7 +62,7 @@ const JoinBar = ({ sessionId }) => {
   }
   return (
     <>
-      {popup && <ErrorPopup title={descTitle} desc={desc} toggle={activatePopup} />}
+      {popup && <ErrorList title={descTitle} desc={desc} toggle={activatePopup} />}
       <GroupDiv>
         <Title name="Join A Session"></Title>
         <form aria-label='Join session form'>

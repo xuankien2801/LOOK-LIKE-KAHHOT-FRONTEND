@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import BackButton from '../../components/BackButton';
-import AdminNavBar from '../../components/AdminNavBar';
-import QuestionForm from '../../components/QuestionForm';
+import BackButton from '../../components/Button/BackButton';
+import AdminNavBar from '../../components/Bars/AdminNavBar';
+import QuestionForm from '../../components/Question/QuestionForm';
 
 export const questionStyle = {
   width: '100%',

@@ -1,10 +1,10 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { fetchGameInfo } from '../components/GameFeed';
-import BackButton from '../../components/BackButton';
-import AdminNavBar from '../../components/AdminNavBar';
-import EditGame from '../../components/EditGame';
-import QuestionFeed from '../../components/QuestionFeed';
+import { fetchGameInfo } from '../../components/GamePlay/GameFeed';
+import BackButton from '../../components/Button/BackButton';
+import AdminNavBar from '../../components/Bars/AdminNavBar';
+import EditGame from '../../components/GamePlay/EditGame';
+import QuestionFeed from '../../components/Question/QuestionFeed';
 
 // This page allows the user to edit the game as required by 2.2.2
 const editGame = () => {

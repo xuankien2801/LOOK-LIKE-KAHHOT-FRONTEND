@@ -1,7 +1,7 @@
 import React from 'react';
 import GameFeed from './GameFeed';
-import { GroupDiv } from '../pages/dashboard';
-import ErrorPopup from './ErrorPopup';
+import { GroupDiv } from '../../pages/Home/Home';
+import ErrorList from '../ErrorList';
 import CreateGame from './CreateGame';
 
 // This component is the Dashboard for the dashboard page
@@ -26,7 +26,7 @@ const Dashboard = () => {
 
   return (
     <>
-      {popup && <ErrorPopup title='Error' desc={desc} toggle={() => activatePopup()}></ErrorPopup>}
+      {popup && <ErrorList title='Error' desc={desc} toggle={() => activatePopup()}></ErrorList>}
       <CreateGame key={changed} activatePopup={() => activatePopup()} activateClicked={() => changeClicked()} changed={changed} setChanged={setChanged} setDesc={setDesc} />
       <GroupDiv>
         <GameFeed key={changed} click={isClicked}/>

@@ -19,7 +19,7 @@ export default function GamePopup ({ title, desc, toggle, sessionId, isStart }) 
 
   // This function creates a copied url for the user
   const copyToClipboard = (sessionId) => {
-    const text = `http:/localhost:3000/play/game/${sessionId}`
+    const text = `http:/localhost:4000/play/game/${sessionId}`
     navigator.clipboard.writeText(text);
   }
 

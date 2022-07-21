@@ -1,8 +1,8 @@
 import React from 'react';
-import Dashboard from '../components/Dashboard';
+import Dashboard from '../../components/GamePlay/Dashboard';
 import Helmet from 'react-helmet';
 import styled from 'styled-components';
-import AdminNavBar from '../components/AdminNavBar';
+import AdminNavBar from '../../components/Bars/AdminNavBar';
 
 export const GroupDiv = styled.div`
   background-color: #fff;

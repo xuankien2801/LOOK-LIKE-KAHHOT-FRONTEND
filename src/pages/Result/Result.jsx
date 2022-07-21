@@ -1,11 +1,11 @@
 import React from 'react';
 import { GroupDiv } from '../Home/Home';
-import Title from '../../components/Title';
-import AdminNavBar from '../../components/AdminNavBar';
+import Title from '../../components/Titles/Title';
+import AdminNavBar from '../../components/Bars/AdminNavBar';
 import { useParams } from 'react-router-dom';
-import ScoreTable from '../../components/ResultBoard';
-import CorrectPercentageChart from '../../components/CorrectPercentageChart';
-import AverageTimeChart from '../../components/AverageTimeChart';
+import ScoreTable from '../../components/GamePlay/ResultBoard';
+import CorrectPercentageChart from '../../components/Chart/CorrectPercentChart';
+import AverageTimeChart from '../../components/Chart/AverageTimeChart';
 
 export const subTitleStyle = {
   fontWeight: 'bold',

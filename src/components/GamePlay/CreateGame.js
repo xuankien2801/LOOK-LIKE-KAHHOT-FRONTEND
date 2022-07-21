@@ -1,6 +1,6 @@
 import React from 'react';
-import { GroupDiv } from '../pages/dashboard';
-import Title from './Title';
+import { GroupDiv } from '../../pages/Home/Home';
+import Title from '../Titles/Title';
 import PropTypes from 'prop-types';
 
 const formStyle = {
@@ -27,7 +27,7 @@ const CreateGame = ({ activatePopup, activateClicked, setDesc, changed, setChang
     }
 
     activateClicked();
-    const req = await fetch('http://localhost:5005/admin/quiz/new', {
+    const req = await fetch('http://localhost:4000/admin/quiz/new', {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',

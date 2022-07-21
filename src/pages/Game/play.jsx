@@ -1,9 +1,9 @@
 import React from 'react';
-import QuestionPanel, { getQuestion } from '../../components/QuestionPanel';
+import QuestionPanel, { getQuestion } from '../../components/Question/QuestionPanel';
 import { useParams } from 'react-router-dom';
 import WaitPanel from '../../components/WaitPanel';
-import AnswerPanel from '../../components/AnswerPanel';
-import GameResults from '../../components/GameResults';
+import AnswerPanel from '../../components/Answer/AnswerPanel';
+import GameResults from '../../components/GamePlay/GameResults';
 import Helmet from 'react-helmet';
 
 // This function calculates how much time is left

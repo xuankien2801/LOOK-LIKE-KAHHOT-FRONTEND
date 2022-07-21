@@ -1,15 +1,15 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
-import GamePopup from './GameStartPopup';
+import GameStart from './GameStart';
 import { Button, IconButton } from '@mui/material';
 import EditIcon from '@mui/icons-material/Edit';
-import Title from './Title';
+import Title from '../Titles/Title';
 import styled from 'styled-components';
-import ErrorPopup from './ErrorPopup';
+import ErrorList from '../ErrorList';
 
 export const fetchGameInfo = async (quizId, token) => {
-  const req = await fetch(`http://localhost:5005/admin/quiz/${quizId}`, {
+  const req = await fetch(`http://localhost:4000/admin/quiz/${quizId}`, {
     method: 'GET',
     headers: {
       'Content-type': 'application/json',
@@ -47,7 +47,7 @@ const GameFeed = ({ click }) => {
 
   // This function gets the quiz data for a game from the backend
   const fetchGames = async () => {
-    const req = await fetch('http://localhost:5005/admin/quiz', {
+    const req = await fetch('http://localhost:4000/admin/quiz', {
       method: 'GET',
       headers: {
         'Content-type': 'application/json',
@@ -73,7 +73,7 @@ const GameFeed = ({ click }) => {
   // This function attempts to start a game by
   // calling the backend
   const startGame = async (quizId) => {
-    const req = await fetch(`http://localhost:5005/admin/quiz/${quizId}/start`, {
+    const req = await fetch(`http://localhost:4000/admin/quiz/${quizId}/start`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -95,7 +95,7 @@ const GameFeed = ({ click }) => {
   // This function attemps to advance a game by
   // calling the backend
   const advanceGame = async (quizId) => {
-    const req = await fetch(`http://localhost:5005/admin/quiz/${quizId}/advance`, {
+    const req = await fetch(`http://localhost:4000/admin/quiz/${quizId}/advance`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -115,7 +115,7 @@ const GameFeed = ({ click }) => {
   // This function attempts to stop a game by
   // calling the backend
   const stopGame = async (quizId) => {
-    await fetch(`http://localhost:5005/admin/quiz/${quizId}/end`, {
+    await fetch(`http://localhost:4000/admin/quiz/${quizId}/end`, {
       method: 'POST',
       headers: {
         'Content-type': 'application/json',
@@ -139,7 +139,7 @@ const GameFeed = ({ click }) => {
   // This function attempts to delete a game by
   // calling the backend
   const deleteGame = async (quizId) => {
-    const req = await fetch(`http://localhost:5005/admin/quiz/${quizId}`, {
+    const req = await fetch(`http://localhost:4000/admin/quiz/${quizId}`, {
       method: 'DELETE',
       headers: {
         'Content-type': 'application/json',
@@ -233,8 +233,8 @@ const GameFeed = ({ click }) => {
   return (
     <div>
       <Title name="Available Games"></Title>
-      {popup && <GamePopup title={descTitle} desc={desc} toggle={activatePopup} sessionId={sessionId} isStart={isStart} quizId={quizId}/>}
-      {popup2 && <ErrorPopup title={descTitle} desc={desc} toggle={activatePopup2}/>}
+      {popup && <GameStart title={descTitle} desc={desc} toggle={activatePopup} sessionId={sessionId} isStart={isStart} quizId={quizId}/>}
+      {popup2 && <ErrorList title={descTitle} desc={desc} toggle={activatePopup2}/>}
       <div id="games-container">
         {games.map((game) => {
           return (

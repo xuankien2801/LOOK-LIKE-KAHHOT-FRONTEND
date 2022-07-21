@@ -1,11 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { GroupDiv } from '../pages/dashboard';
+import { GroupDiv } from '../../pages/Home/Home';
 import QuestionContainer from './QuestionContainer';
-import QuestionOptions from './QuestionOptions';
+import QuestionOption from './QuestionOption';
 import ReactPlayer from 'react-player';
 import styled from 'styled-components';
-import { answerStyle } from './AnswerPanel';
+import { answerStyle } from '../Answer/AnswerPanel';
 
 export const YouTubeBox = styled.div`
   width: 100%;
@@ -30,7 +30,7 @@ export const Image = styled.img`
 
 // This function gets the question details from the backend
 export const getQuestion = async (playerId) => {
-  const req = await fetch(`http://localhost:5005/play/${playerId}/question`, {
+  const req = await fetch(`http://localhost:4000/play/${playerId}/question`, {
     method: 'GET',
     headers: {
       'Content-type': 'application/json',
@@ -89,7 +89,7 @@ const QuestionPanel = ({ playerId, timer, counter }) => {
         { hasImage && <Image aria-hidden='true' src={image} alt='Question Image'/> }
         <TimerBox><TimerText>Timer: {timer}</TimerText></TimerBox>
         <p id='description' style={answerStyle}>Click below to select options:</p>
-        <QuestionOptions options={options} isMulti={isMulti} playerId={playerId}></QuestionOptions>
+        <QuestionOption options={options} isMulti={isMulti} playerId={playerId}></QuestionOption>
       </GroupDiv>
     </>
   )

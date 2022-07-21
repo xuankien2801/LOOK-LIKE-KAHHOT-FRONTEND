@@ -1,7 +1,7 @@
 import React from 'react';
-import { GroupDiv } from '../pages/dashboard';
+import { GroupDiv } from '../../pages/Home/Home';
 import PropTypes from 'prop-types';
-import Title from './Title';
+import Title from '../Titles/Title';
 
 const TotalStyle = {
   fontWeight: 'bold',
@@ -15,7 +15,7 @@ const timeStyle = {
 
 // This function gets the results for the game from the backend
 export const getResults = async (playerId) => {
-  const req = await fetch(`http://localhost:5005/play/${playerId}/results`, {
+  const req = await fetch(`http://localhost:4000/play/${playerId}/results`, {
     method: 'GET',
     headers: {
       'Content-type': 'application/json',

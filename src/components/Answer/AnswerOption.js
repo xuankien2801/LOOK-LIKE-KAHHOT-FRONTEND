@@ -2,7 +2,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Button, Checkbox } from '@mui/material';
-import { OptionDiv } from './QuestionOptions';
+import { OptionDiv } from '../Question/QuestionOption';
 
 const optionStyle = {
   width: '100%',

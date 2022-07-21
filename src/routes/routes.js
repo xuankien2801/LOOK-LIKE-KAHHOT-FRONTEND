@@ -24,26 +24,24 @@ import ViewRoom from '../pages/ChooseAccount/teacher/room/watch';
 import Student_username from '../pages/ChooseAccount/student/student-Username';
 */
 
-// Public routes
-function App () {
+export const Router = () =>{
     return (
-      <BrowserRouter>
-        <Routes>
-          <Route path="/register" element={<Register />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/home" element={<Home />} />
-          <Route path="/edit/game/:quizId" element={<EditGame />} />
-          <Route path="/edit/game/:quizId/question/:questionId" element={<EditQuestion />}/>
-          <Route path="/edit/game/:sessionId/results" element={<Result />}></Route>
-          <Route exact path="/play/game/" element={<JoinGame />} />
-          <Route path="/play/game/:sessionId" element={<JoinGame />} />
-          <Route path="/playing/player/:playerId" element={<PlayGame />} />
-        </Routes>
-      </BrowserRouter>
+        <BrowserRouter>
+            <Routes>
+                <Route path="/register" element={<Register />} />
+                <Route path="/login" element={<Login />} />
+                <Route path="/home" element={<Home />} />
+                <Route path="/edit/game/:quizId" element={<EditGame />} />
+                <Route path="/edit/game/:quizId/question/:questionId" element={<EditQuestion />}/>
+                <Route path="/edit/game/:sessionId/results" element={<Result />}></Route>
+                <Route exact path="/play/game/" element={<JoinGame />} />
+                <Route path="/play/game/:sessionId" element={<JoinGame />} />
+                <Route path="/playing/player/:playerId" element={<PlayGame />} />
+            </Routes>
+        </BrowserRouter>
     );
   }
-  
-  export default App;
+
 
     /*
     {path:  config.routes.chooseAccount, component:ChooseAccount},
