@@ -6,6 +6,7 @@ import decode from "jwt-decode"
 import * as actionType from "../../constants/actionTypes"
 import globe from "../../assets/globe.svg"
 import { changeLanguage } from "../../actions/language"
+import axios from "axios"
 
 function Navbar() {
   const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")))
@@ -21,13 +22,22 @@ function Navbar() {
     setUser(null)
     socket.disconnect()
   }
-
-  useEffect(() => {
+  const delay = ms => new Promise(
+    resolve => setTimeout(resolve, ms)
+  );
+  useEffect(async () =>  {
     const token = user?.accessToken
     if (token) {
       const decodedToken = decode(token)
       if (decodedToken.exp * 1000 < new Date().getTime()) {
-        logout()
+        // logout()
+        let profile = JSON.parse(localStorage.getItem("profile"));
+        const res = await axios.post("http://localhost:3012/api/auth/refresh",{
+          accessToken: profile.accessToken,
+          refreshToken: profile.refreshToken
+        })
+        profile.accessToken = res.data.accessToken;
+        window.localStorage.setItem("profile",JSON.stringify(profile));
       }
     }
     setUser(JSON.parse(localStorage.getItem("profile")))
