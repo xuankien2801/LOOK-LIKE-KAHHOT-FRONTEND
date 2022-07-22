@@ -33,7 +33,7 @@ function WaitingRoom({ pin, socket }) {
               {playerList.map((player) => (
                 <li>
                   <mark>{player.userName}</mark>
-                  <small>{isLanguageEnglish ? "Student" : "Uczeń"}</small>
+                  <small>{isLanguageEnglish ? "Student" : "Học sinh"}</small>
                 </li>
               ))}
             </ol>
