@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-  Link,
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { navStyle, navEleStyle, navLinkStyle } from './AdminNavBar';
 
 // This component forms the navigation bar for the login/register pages

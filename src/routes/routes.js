@@ -14,22 +14,13 @@ import PlayGame from '../pages/Game/play';
 import JoinGame from '../pages/Game/join';
 import EditQuestion from '../pages/Questions/edit';
 
-
-/*
-import ChooseAccount from '../pages/ChooseAccount';
-import Teacher from '../pages/ChooseAccount/teacher';
-import Student from '../pages/ChooseAccount/student';
-import ListRoom from '../pages/ChooseAccount/teacher/room/list';
-import ViewRoom from '../pages/ChooseAccount/teacher/room/watch';
-import Student_username from '../pages/ChooseAccount/student/student-Username';
-*/
-
 export const Router = () =>{
     return (
         <BrowserRouter>
             <Routes>
                 <Route path="/register" element={<Register />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/" element={<Home />} />
                 <Route path="/home" element={<Home />} />
                 <Route path="/edit/game/:quizId" element={<EditGame />} />
                 <Route path="/edit/game/:quizId/question/:questionId" element={<EditQuestion />}/>
@@ -41,13 +32,3 @@ export const Router = () =>{
         </BrowserRouter>
     );
   }
-
-
-    /*
-    {path:  config.routes.chooseAccount, component:ChooseAccount},
-    {path:  config.routes.teacher, component:Teacher},
-    {path:  config.routes.student, component:Student},
-    {path:  config.routes.student_username, component:Student_username},
-    {path:  config.routes.room, component:ListRoom},
-    {path:  config.routes.watch, component:ViewRoom},
-    */

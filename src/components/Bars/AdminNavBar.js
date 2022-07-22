@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export const navStyle = {
   display: 'flex',
-  backgroundColor: '#FF8E00',
+  backgroundColor: '#03EAFF',
 }
 
 export const navEleStyle = {
